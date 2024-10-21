@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass-watch": "sass --no-source-map --watch styles/main.scss public/css/main.css",
+    "sass-watch": "sass --no-source-map --watch main.scss main.css",
     "nodemon-watch": "nodemon index.js -e *",
     "dev": "npm-run-all --parallel sass-watch nodemon-watch"
   },
