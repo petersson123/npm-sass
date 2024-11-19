@@ -1,19 +1,30 @@
+
+</body>
+</html>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
-    <title>Interactive Quiz</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="bootstrap.min.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Webbapp</title>
+    <link rel="stylesheet" href="main.css"> <!-- Extern CSS -->
 </head>
 <body>
-  <div id="quiz">
-    <h1>Interactive Quiz</h1>
-    <div id="question"></div>
-    <div id="options"></div>
-    <button id="submit">Submit</button>
-  </div>
-
-  <script src="index.js"></script>
+    <header>
+        <h1>Quiz Webbapp</h1>
+    </header>
+    <div class="container">
+        <div class="score">Rätta svar: <span id="score">0</span></div>
+        <div id="quiz">
+            <div class="question"></div>
+            <ul class="options"></ul>
+            <button class="next-btn" onclick="nextQuestion()">Nästa fråga</button>
+        </div>
+    </div>
+    <footer>
+        <p>Prö kodarna -Hugo</p>
+    </footer>
+    <script src="script.js"></script> <!-- Laddar extern JS-fil -->
+    <script src="index.js"></script>
 </body>
 </html>
