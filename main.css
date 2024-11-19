@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -86,4 +87,10 @@ footer {
   text-align: center;
   font-size: 1.2rem;
   margin-bottom: 10px;
+=======
+h1 {
+  color: Red;
+>>>>>>> 83baca8c9f8feb5c20e0f7e3a4d378371f03b9f5
 }
+
+/*# sourceMappingURL=main.css.map */
