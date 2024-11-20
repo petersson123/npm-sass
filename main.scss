@@ -1,6 +1,119 @@
-$darkRed: rgb(35, 139, 64);
+// Variabler
+$primary-color: #4facfe;
+$secondary-color: #00f2fe;
+$background-color: rgba(58, 21, 192, 0.7);
+$text-color: #fff;
+$button-color: #4caf50;
+$button-hover-color: #1e88e5;
+$selected-color: #ffa500;
+$disabled-opacity: 0.6;
 
-h1 {
-    color: Red;
-    
+// Grundläggande stil
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, $primary-color, $secondary-color);
+  color: $text-color;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  background: $background-color;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.question {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.options {
+  list-style: none;
+  padding: 0;
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background: $button-color;
+    border: none;
+    color: $text-color;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, opacity 0.3s ease;
+    margin-bottom: 10px;
+
+    &.selected {
+      background: $selected-color;
+    }
+
+    &.dimmed {
+      opacity: $disabled-opacity;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.next-btn {
+  display: none;
+  width: 100%;
+  padding: 10px;
+  background: #2196f3;
+  border: none;
+  color: $text-color;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: $button-hover-color;
+  }
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.score {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+// Responsiv design
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .question {
+    font-size: 1.5rem;
+  }
+
+  .options button {
+    font-size: 1.2rem;
+  }
+
+  .next-btn {
+    font-size: 1.2rem;
+  }
 }

@@ -1,9 +1,9 @@
-// Frågebas
+
 const questions = [
     {
         question: "Vad är huvudstaden i Sverige?",
         options: ["Stockholm", "Göteborg", "Malmö", "Uppsala"],
-        answer: 0 // Index för rätt svar
+        answer: 0 
     },
     {
         question: "Vilken planet är känd som den röda planeten?",
