@@ -36,7 +36,6 @@ header h1 {
 
 .score {
   position: fixed;
-  top: em;
   right: 1em;
   display: flex;
   flex-direction: column;
