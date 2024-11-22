@@ -52,7 +52,7 @@ function checkAnswer(button, isCorrect) {
 
     // Markera vald knapp
     button.classList.remove('dimmed');
-    button.classList.add('selected');
+    button.classList.add(isCorrect ? 'correct' : 'incorrect');
 
     // Om rätt svar, uppdatera poäng
     if (isCorrect) {
