@@ -80,3 +80,5 @@ function nextQuestion() {
 
 // Ladda första frågan vid start
 document.addEventListener('DOMContentLoaded', loadQuestion);
+
+
