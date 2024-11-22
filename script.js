@@ -20,18 +20,15 @@ const questions = [
 let currentQuestionIndex = 0;
 let score = 0;
 
-// Funktion för att ladda en fråga
 function loadQuestion() {
     const questionContainer = document.querySelector('.question');
     const optionsContainer = document.querySelector('.options');
     const nextButton = document.querySelector('.next-btn');
 
-    // Nollställ tidigare innehåll
     questionContainer.textContent = questions[currentQuestionIndex].question;
     optionsContainer.innerHTML = '';
     nextButton.style.display = 'none';
 
-    // Lägg till alternativ
     questions[currentQuestionIndex].options.forEach((option, index) => {
         const button = document.createElement('button');
         button.textContent = option;
@@ -40,45 +37,69 @@ function loadQuestion() {
     });
 }
 
-// Funktion för att kolla svaret
 function checkAnswer(button, isCorrect) {
     const options = document.querySelectorAll('.options button');
 
-    // Inaktivera alla knappar och tona ner dem
     options.forEach(btn => {
         btn.disabled = true;
         btn.classList.add('dimmed');
     });
 
-    // Markera vald knapp
     button.classList.remove('dimmed');
     button.classList.add(isCorrect ? 'correct' : 'incorrect');
 
-    // Om rätt svar, uppdatera poäng
     if (isCorrect) {
         score++;
         document.getElementById('score').textContent = score;
     }
 
-    // Visa nästa-knappen
     document.querySelector('.next-btn').style.display = 'block';
 }
 
-// Funktion för nästa fråga
 function nextQuestion() {
     currentQuestionIndex++;
 
-    // Kolla om fler frågor finns
     if (currentQuestionIndex < questions.length) {
         loadQuestion();
     } else {
-        // Slut på frågor
         document.getElementById('quiz').innerHTML = `<h2>Quizet är över!</h2>
             <p>Du fick ${score} av ${questions.length} rätt.</p>`;
     }
 }
 
-// Ladda första frågan vid start
 document.addEventListener('DOMContentLoaded', loadQuestion);
+
+
+
+score = 0;
+
+function go(x){
+  $({score: 0}).animate({score: x},{
+    duration: 1000,
+    easing:"linear",
+    step: function(now, fx){
+      $("#score").html(score + Math.floor(now));
+    },
+    queue:false,
+    complete: function(now, fx){
+      score += x;
+    }
+  });
+  $("#tag").fadeIn({
+    duration:700,
+    easing:"linear",
+    step:function(now, fx){
+      $(this).css("top", -55 * now  +"px");
+    }
+  }).fadeOut({
+    duration:300,
+    step:function(now, fx){
+      $(this).css("top",-55 * ( 2 - now) + "px");
+    }
+  });
+
+}
+  
+
 
 
