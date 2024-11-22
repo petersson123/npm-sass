@@ -46,6 +46,12 @@ header h1 {
   transition: background 0.3s ease, opacity 0.3s ease;
   margin-bottom: 10px;
 }
+.options button.correct {
+  background-color: #21dd3a;
+}
+.options button.incorrect { 
+  background-color: #dc3545;
+}
 .options button.selected {
   background: #21dd3a;
 }
