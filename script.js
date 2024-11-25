@@ -1,34 +1,33 @@
 
 const questions = [
-    {
-        question: "Vad är huvudstaden i Sverige?",
-        options: ["Stockholm", "Göteborg", "Malmö", "Uppsala"],
-        answer: 0 
-    },
-    {
-        question: "Vilken planet är känd som den röda planeten?",
-        options: ["Mars", "Venus", "Jupiter", "Merkurius"],
-        answer: 0
-    },
-    {
-        question: "Vilket år blev Sverige medlem i EU?",
-        options: ["1991", "1995", "2000", "2005"],
-        answer: 1
-    }
+    { question: "Vad är 2 + 2?", options: ["3", "4", "5"], answer: 1 },
+    { question: "Vad är huvudstaden i Sverige?", options: ["Göteborg", "Stockholm", "Malmö"], answer: 1 },
+    { question: "Vilket år är det?", options: ["2023", "2024", "2025"], answer: 1 },
+    { question: "Vad är färgen på himlen?", options: ["Blå", "Grön", "Röd"], answer: 0 },
+    { question: "Vilken är den största planeten i vårt solsystem?", options: ["Jorden", "Mars", "Jupiter"], answer: 2 },
+    { question: "Vad är 5 x 6?", options: ["30", "35", "40"], answer: 0 },
+    { question: "Vilket land ligger norr om Sverige?", options: ["Norge", "Finland", "Danmark"], answer: 0 },
+    { question: "Vad är huvudstaden i Frankrike?", options: ["Berlin", "Madrid", "Paris"], answer: 2 },
+    { question: "Vilken är den största havet på jorden?", options: ["Atlanten", "Indiska oceanen", "Stilla havet"], answer: 2 },
+    { question: "Vem skrev 'Romeo och Julia'?", options: ["Shakespeare", "Dickens", "Austen"], answer: 0 }
 ];
+
 
 let currentQuestionIndex = 0;
 let score = 0;
 
+// Funktion för att ladda en fråga
 function loadQuestion() {
     const questionContainer = document.querySelector('.question');
     const optionsContainer = document.querySelector('.options');
     const nextButton = document.querySelector('.next-btn');
 
+    // Nollställ tidigare innehåll
     questionContainer.textContent = questions[currentQuestionIndex].question;
     optionsContainer.innerHTML = '';
     nextButton.style.display = 'none';
 
+    // Lägg till alternativ
     questions[currentQuestionIndex].options.forEach((option, index) => {
         const button = document.createElement('button');
         button.textContent = option;
@@ -37,6 +36,7 @@ function loadQuestion() {
     });
 }
 
+// Funktion för att kolla svaret
 function checkAnswer(button, isCorrect) {
     const options = document.querySelectorAll('.options button');
 
