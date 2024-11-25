@@ -18,7 +18,7 @@ header {
   padding: 8em 0.1em;
   background: #181818;
   width: 100%;
-
+  
 }
 
 header h1 {
@@ -144,16 +144,16 @@ header h1 {
   }
 
   .container {
-    width: 95%;
+    width: 70%;
   }
 
   .question {
-    font-size: 1em;
-    padding: 1.5em;
+    font-size: 2em;
+    padding: 1em;
   }
 
   .options {
-    padding: 1.5em;
+    padding: 1em;
   }
 
   .options button {
@@ -162,7 +162,8 @@ header h1 {
   }
 
   .next-btn {
-    font-size: 0.9em;
+    font-size: 1em;
+    width: 40%;
   }
 }
 
