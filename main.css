@@ -15,20 +15,21 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2em 1em;
+  padding: 8em 0.1em;
   background: #181818;
   width: 100%;
+
 }
 
 header h1 {
   margin: 0;
-  font-size: 2em;
+  font-size: 4em;
 }
 
 
 .container {
   width: 90%;
-  max-width: 50em;
+  max-width: 70em;
   margin: 2em auto 0;
   text-align: center;
   flex: 1; 
@@ -44,7 +45,8 @@ header h1 {
   background-color: #21dd3a;
   padding: 1.3em;
   border-radius: 50em;
-  font-size: 1em;
+  font-size: 2em;
+  font-family: bold;
   box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.2);
   width: 3em;
   height: 3em;
@@ -53,23 +55,30 @@ header h1 {
 
 #score {
   font-size: 1.5em;
+  font-family: bold;
 }
 
 .question {
-  font-size: 1.2em;
+  font-size: 3em;
   margin: 1em auto;
   background: rgba(14, 37, 183, 0.6);
-  padding: 2em;
+  padding: 1em;
   border-radius: 1em;
   text-align: center;
 }
 
+.picture {
+  img
+}
+
 .options {
-  margin: 2em auto;
+  font-size: 2em;
+  margin: 1em auto;
   background: rgba(14, 37, 183, 0.6);
   border-radius: 1em;
-  padding: 2em;
+  padding: 1em;
   box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 .options button {
@@ -79,10 +88,11 @@ header h1 {
   background: #64cdd4;
   border: none;
   color: #181818;
-  border-radius: 2em;
+  border-radius: 1em;
   font-size: 1em;
   cursor: pointer;
-  transition:  0.3s ease, opacity 0.3s ease;
+  transition:  0.3s ease;
+  opacity: 0.3s ease;
 }
 
 .options button.correct {
@@ -94,21 +104,26 @@ header h1 {
 }
 
 .next-btn {
-  display: block;
-  width: 100%;
+  display: flex;
   padding: 1em;
-  background: #d6d4de;
+  background: 0.3s ease;
   border: none;
-  color: #120f0f;
+  color: #f4eeee;
   border-radius: 0.5em;
-  font-size: 1em;
+  font-size: 1.5em;
   cursor: pointer;
   margin-top: 1.5em;
-  transition: background 0.3s ease;
+  transition:  0.3s ease;
+  width: 25%;
+  max-width: 70em;
+  margin: 2em auto 0;
+  text-align: center;
+  flex: 1; 
+  background-color: rgba(14, 37, 183, 0.6);
 }
 
 .next-btn:hover {
-  background: #595574;
+  background: #21dd3a;
 }
 
 @media (max-width: 48em) { 
