@@ -1,6 +1,6 @@
 
 const questions = [
-    { question: "Vad är 2 + 2?", options: ["3", "4", "5"], answer: 1 },
+    { question: "Vad är 2 + 2?", image: "./bilder/nedladdning.jpg", options: ["3", "4", "5"], answer: 1 },
     { question: "Vad är huvudstaden i Sverige?", options: ["Göteborg", "Stockholm", "Malmö"], answer: 1 },
     { question: "Vilket år är det?", options: ["2023", "2024", "2025"], answer: 1 },
     { question: "Vad är färgen på himlen?", options: ["Blå", "Grön", "Röd"], answer: 0 },
@@ -19,6 +19,7 @@ let score = 0;
 // Funktion för att ladda en fråga
 function loadQuestion() {
     const questionContainer = document.querySelector('.question');
+    const imageContainer = document.querySelector('.image-container');
     const optionsContainer = document.querySelector('.options');
     const nextButton = document.querySelector('.next-btn');
 
@@ -26,6 +27,13 @@ function loadQuestion() {
     questionContainer.textContent = questions[currentQuestionIndex].question;
     optionsContainer.innerHTML = '';
     nextButton.style.display = 'none';
+
+    // Lägg till bild om den finns
+    if (questions[currentQuestionIndex].image) {
+        imageContainer.innerHTML = `<img src="${questions[currentQuestionIndex].image}" alt="Frågeillustration" class="question-image">`;
+    } else {
+        imageContainer.innerHTML = ''; // Ta bort eventuell tidigare bild
+    }
 
     // Lägg till alternativ
     questions[currentQuestionIndex].options.forEach((option, index) => {
@@ -40,21 +48,52 @@ function loadQuestion() {
 function checkAnswer(button, isCorrect) {
     const options = document.querySelectorAll('.options button');
 
+    // Inaktivera alla knappar och tona ner dem
     options.forEach(btn => {
         btn.disabled = true;
         btn.classList.add('dimmed');
     });
 
+    // Markera vald knapp
     button.classList.remove('dimmed');
-    button.classList.add(isCorrect ? 'correct' : 'incorrect');
+    button.classList.add('selected');
 
+    // Om rätt svar, uppdatera poäng
     if (isCorrect) {
         score++;
         document.getElementById('score').textContent = score;
     }
 
+    // Visa nästa-knappen
     document.querySelector('.next-btn').style.display = 'block';
 }
+
+// Funktion för nästa fråga
+function nextQuestion() {
+    currentQuestionIndex++;
+
+    // Kolla om fler frågor finns
+    if (currentQuestionIndex < questions.length) {
+        loadQuestion();
+    } else {
+        // Slut på frågor
+        document.getElementById('quiz').innerHTML = `<h2>Quizet är över!</h2>
+            <p>Du fick ${score} av ${questions.length} rätt.</p>`;
+    }
+}
+
+// Ladda första frågan vid start
+document.addEventListener('DOMContentLoaded', () => {
+    // Skapa en container för bilden dynamiskt
+    const quizElement = document.getElementById('quiz');
+    const imageContainer = document.createElement('div');
+    imageContainer.className = 'image-container';
+    quizElement.insertBefore(imageContainer, document.querySelector('.options'));
+
+    loadQuestion();
+});
+
+
 
 function nextQuestion() {
     currentQuestionIndex++;
@@ -70,6 +109,25 @@ function nextQuestion() {
 document.addEventListener('DOMContentLoaded', loadQuestion);
 
 
+// Funktion för att kolla svaret
+function checkAnswer(button, isCorrect) {
+  const options = document.querySelectorAll('.options button');
+
+  options.forEach(btn => {
+      btn.disabled = true;
+      btn.classList.add('dimmed');
+  });
+
+  button.classList.remove('dimmed');
+  button.classList.add(isCorrect ? 'correct' : 'incorrect');
+
+  if (isCorrect) {
+      score++;
+      document.getElementById('score').textContent = score;
+  }
+
+  document.querySelector('.next-btn').style.display = 'block';
+}
 
 score = 0;
 
