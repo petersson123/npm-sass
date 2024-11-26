@@ -15,23 +15,72 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5em 0.1em;
+  padding: 2.3em 0.1em;
   background: #181818;
   width: 100%;
   max-height: 0.1em;
 }
 
+
+
+#timer.green-bg {
+  background-color: #21dd3a; 
+  color: white;
+  position: fixed;
+  left: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #21dd3a;
+  padding: 0.5em;
+  border-radius: 50em;
+  font-size: 1em;
+  font-family: bold;
+  width: 5em;
+  height: 2em;
+  text-align: center;
+  margin: 1em auto;
+  border: 0.1em solid snow;
+  box-shadow: 0 0em 0.4em rgba(0, 0, 0, 0.9);
+}
+
+#timer.red-bg {
+  background-color: #21dd3a; 
+  color: white;
+  position: fixed;
+  left: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ce081b;
+  padding: 0.5em;
+  border-radius: 50em;
+  font-size: 1em;
+  font-family: bold;
+  width: 5em;
+  height: 2em;
+  text-align: center;
+  margin: 1em auto;
+  border: 0.1em solid rgb(231, 218, 218);
+  box-shadow: 0 0em 0.4em rgba(0, 0, 0, 0.9);
+
+
+}
+
+
 header h1 {
   display: flex;
   margin: 0;
-  font-size: 3.5em;
+  font-size: 2em;
 }
 
 
 .container {
   width: 80%;
   max-width: 80%;
-  margin: 2em auto 0;
+  margin: 1em auto 0;
   text-align: center;
   flex: 1; 
 }
@@ -43,15 +92,18 @@ header h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #21dd3a;
+  background-color: #118621;
   padding: 1.3em;
   border-radius: 50em;
   font-size: 1em;
   font-family: bold;
-  box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0em 0.4em rgba(0, 0, 0, 0.9);
   width: 3em;
   height: 3em;
   text-align: center;
+  border: 0.2em solid rgb(231, 218, 218);
+
+  
 }
 
 #score {
@@ -60,20 +112,23 @@ header h1 {
 }
 
 .question {
-  font-size: 2em;
-  margin: 1em auto;
+  font-size: 1.5em;
+  margin: 0.3em auto;
   background: rgba(14, 37, 183, 0.6);
   padding: 0.5em;
   border-radius: 1em;
   text-align: center;
-  width: 50%;
-  max-width: 70em;
+  width: 40%;
+  max-width: 100wh;
+  max-height: 100vh;  
+
+  
 }
 
 
 
 .options {
-  font-size: 1.3em;
+  font-size: 0.8em;
   margin: 1em auto;
   background: rgba(14, 37, 183, 0.6);
   border-radius: 1em;
@@ -86,8 +141,8 @@ header h1 {
 
 .options button {
   width: 100%;
-  padding: 1em;
-  margin: 0.5em 0;
+  padding: 0.5em;
+  margin: 0.4em 0;
   background: #64cdd4;
   border: none;
   color: #181818;
@@ -108,25 +163,23 @@ header h1 {
 
 .next-btn {
   display: flex;
-  padding: 1em;
+  padding: 0.3em;
   background: 0.3s ease;
-  border: none;
   color: #f4eeee;
   border-radius: 0.5em;
-  font-size: 1.5em;
+  font-size: 1em;
   cursor: pointer;
-  margin-top: 1.5em;
   transition:  0.3s ease;
-  width: 25%;
+  width: 15%;
   max-width: 70em;
-  margin: 2em auto 0;
+  margin: 0.5em auto 0;
   text-align: center;
   flex: 1; 
   background-color: rgba(14, 37, 183, 0.6);
 }
 
 .next-btn:hover {
-  background: #21dd3a;
+  background: #118621;
 }
 
 @media (max-width: 48em) { 
@@ -174,7 +227,7 @@ header h1 {
   text-align: center;
   margin: 15px 0;
 
-  .question-image {
+.question-image {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
