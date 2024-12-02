@@ -1,7 +1,7 @@
 
 const questions = [
-    { question: "Vad heter våran galax?", image: "./bilder/milky_way_galaxy_1.jpg", options: ["3", "4", "5"], answer: 1 },
-    { question: "Vad är huvudstaden i Sverige?", image: "./bilder/nedladdning1.jpg", options: ["Göteborg", "Stockholm", "Malmö"], answer: 1 },
+    { question: "Vad heter våran galax?", image: "./bilder/fraga1.jpg", options: ["3", "4", "5"], answer: 1 },
+    { question: "Vad är huvudstaden i Sverige?", image: "./bilder/fraga2.jpg", options: ["Göteborg", "Stockholm", "Malmö"], answer: 1 },
     { question: "Vilket år är det?", options: ["2023", "2024", "2025"], answer: 1 },
     { question: "Vad är färgen på himlen?", options: ["Blå", "Grön", "Röd"], answer: 0 },
     { question: "Vilken är den största planeten i vårt solsystem?", options: ["Jorden", "Mars", "Jupiter"], answer: 2 },
