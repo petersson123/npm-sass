@@ -8,7 +8,8 @@ const assets = [
     './bilder/fraga2.jpg',
     './main.css',
     './main.css.map',
-    './bootstrap.min.css'
+    './bootstrap.min.css',
+    './script.js'
 ];
 
 self.addEventListener('install', evt => {
