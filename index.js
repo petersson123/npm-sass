@@ -5,3 +5,9 @@ function RegisterServiceWorker() {
     });
   }
 }
+function Main() {
+  const clickEvent = "click";
+  this.RegisterServiceWorker();
+}
+const main = new Main();
+main.Main();
