@@ -34,7 +34,18 @@ self.addEventListener('fetch', evt => {
     console.log('fetch event', evt);
     evt.respondWith(
         caches.match(evt.request).then(cacheRes => {
-            return cacheRes || fetch(evt.request);
+            if (cacheRes) {
+                return cacheRes.blob().then(body => 
+                    new Response(body, {
+                        headers: {
+                            'Content-Type': cacheRes.headers.get('Content-Type'),
+                            'Cache-Control': 'public, max-age=31536000', 
+                            'Last-Modified': cacheRes.headers.get('Last-Modified')
+                        }
+                    })
+                );
+            }
+            return fetch(evt.request);
         })
     );
 });
