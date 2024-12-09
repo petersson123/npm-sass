@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url(/bilder/360_F_444126709_Ill50TQ2ethQiw5GZowNQqkkFOMBjlEW.jpg);
+  background-image: url(bilder/bakgrund.jpg);
   color: #e4e2ec;
   display: flex;
   flex-direction: column;
