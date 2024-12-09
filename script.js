@@ -1,16 +1,10 @@
 
 const questions = [
-<<<<<<< HEAD
-    { question: "Vad heter denna typen av åkstil?", image: "./bilder/milky_way_galaxy_1.jpg", options: ["Freeride", "Piståkning", "Freestyle"], answer: 1 },
+
+    { question: "Vad heter denna typen av åkstil?", image: "./bilder/fraga1.jpg", options: ["Freeride", "Piståkning", "Freestyle"], answer: 0 },
     { question: "Var i backen passar denna skidan bäst?", image: "./bilder/nedladdning1.jpg", options: ["Pist", "Off-pist", "All-mountain"], answer: 1 },
     { question: "Vilket är sveriges största skidsystem?", options: ["Åre", "Branäs", "Sälen"], answer: 2 },
-    { question: "Vilket år kom längskidåkning till OS?", options: ["1936", "1924", "1932"], answer: 1 },
-=======
-    { question: "Vad heter våran galax?", image: "./bilder/fraga1.jpg", options: ["3", "4", "5"], answer: 1 },
-    { question: "Vad är huvudstaden i Sverige?", image: "./bilder/fraga2.jpg", options: ["Göteborg", "Stockholm", "Malmö"], answer: 1 },
-    { question: "Vilket år är det?", options: ["2023", "2024", "2025"], answer: 1 },
-    { question: "Vad är färgen på himlen?", options: ["Blå", "Grön", "Röd"], answer: 0 },
->>>>>>> 4900af97ed56a78ba433eb58aaabb33d267dee39
+    { question: "Vilket år kom längskidåkning till OS?", image: "./bilder/variant.jpg", options: ["1936", "1924", "1932"], answer: 1 },
     { question: "Vilken är den största planeten i vårt solsystem?", options: ["Jorden", "Mars", "Jupiter"], answer: 2 },
     { question: "Vad är 5 x 6?", options: ["30", "35", "40"], answer: 0 },
     { question: "Vilket land ligger norr om Sverige?", options: ["Norge", "Finland", "Danmark"], answer: 0 },
