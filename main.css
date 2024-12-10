@@ -2,7 +2,11 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
   background-image: url(/bilder/andrew-w-Ch0EbLhaPlQ-unsplash\(1\).jpg);
+=======
+  background-image: url(bilder/bakgrund.jpg);
+>>>>>>> 7ec13db5777a5aba1149162ad984feed545041da
   color: #e4e2ec;
   display: flex;
   flex-direction: column;
