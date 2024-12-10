@@ -9,7 +9,8 @@ const assets = [
     './main.css',
     './main.css.map',
     './bootstrap.min.css',
-    './script.js'
+    './script.js',
+    './st.html'
 ];
 
 self.addEventListener('install', evt => {
