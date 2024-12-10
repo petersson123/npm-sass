@@ -39,7 +39,7 @@ self.addEventListener('fetch', evt => {
                     new Response(body, {
                         headers: {
                             'Content-Type': cacheRes.headers.get('Content-Type'),
-                            'Cache-Control': 'public, max-age=31536000', 
+                            'Cache-Control': 'public, max-age=30', 
                             'Last-Modified': cacheRes.headers.get('Last-Modified')
                         }
                     })
