@@ -231,6 +231,10 @@ body {
     max-width: 6em;
   }
 
+  body {
+    background-image: url(./bilder/andrew-w-Ch0EbLhaPlQ-unsplash\(1\).jpg);
+  }
+
   .options {
     padding: 1em;
   }
