@@ -1,6 +1,6 @@
 
 const questions = [
-    { question: "Vad heter våran galax?", image: "./bilder/fraga1.jpg", options: ["3", "4", "5"], answer: 1 },
+    { question: "Vad heter våran galax?", image: "./bilder/1.jpg", options: ["3", "4", "5"], answer: 1 },
     { question: "Vad är huvudstaden i Sverige?", image: "./bilder/fraga2.jpg", options: ["Göteborg", "Stockholm", "Malmö"], answer: 1 },
     { question: "Vilket år är det?", options: ["2023", "2024", "2025"], answer: 1 },
     { question: "Vad är färgen på himlen?", options: ["Blå", "Grön", "Röd"], answer: 0 },
