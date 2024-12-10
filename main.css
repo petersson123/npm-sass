@@ -26,42 +26,42 @@ body {
   color: #e4e2ec;
   position: fixed;
   left: 1em;
+  top: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #118621;
-  padding: 0.5em;
+  background-color: #29a544;
+  padding: 1.3em;
   border-radius: 50em;
   font-size: 1em;
   font-family: bold;
-  width: 5em;
+  box-shadow: 0 0em 0.4em rgba(0, 0, 0, 0.9);
+  width: 2em;
   height: 2em;
   text-align: center;
-  margin: 1em auto;
-  border: 0.1em solid #d7ab7c;
-  box-shadow: 0 0em 0.4em rgba(0, 0, 0, 0.9);
+  border: 0.2em solid #d7ab7c;
 }
 
 #timer.red-bg {
   color: #e4e2ec;
   position: fixed;
   left: 1em;
+  top: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #ce081b;
-  padding: 0.5em;
+  background-color: #d63317;
+  padding: 1.3em;
   border-radius: 50em;
   font-size: 1em;
   font-family: bold;
-  width: 5em;
+  box-shadow: 0 0em 0.4em rgba(0, 0, 0, 0.9);
+  width: 2em;
   height: 2em;
   text-align: center;
-  margin: 1em auto;
-  border: 0.1em solid #d7ab7c;
-  box-shadow: 0 0em 0.4em rgba(0, 0, 0, 0.9);
+  border: 0.2em solid #d7ab7c;
 
 
 }
@@ -79,6 +79,7 @@ body {
   color: #e4e2ec;
   position: fixed;
   right: 1em;
+  top: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -233,6 +234,7 @@ body {
 
   body {
     background-image: url(./bilder/andrew-w-Ch0EbLhaPlQ-unsplash\(1\).jpg);
+    background-attachment: fixed;
   }
 
   .options {
