@@ -18,21 +18,20 @@ self.addEventListener('install', evt => {
     evt.waitUntil(    
         caches.open(staticCacheName).then(cache => {
             console.log('caching shell assets');
-            cache.addAll(assets);
+            return cache.addAll(assets);
+        }).catch(error => {
+            console.error('Cache addAll failed:', error);
         })
     );
+    self.skipWaiting();
 });
-
-
 
 self.addEventListener('activate', evt => {
-    console.log('service woker has been activated');
+    console.log('service worker has been activated');
+    evt.waitUntil(self.clients.claim());
 });
 
-
-
 self.addEventListener('fetch', evt => {
-    console.log('fetch event', evt);
     evt.respondWith(
         caches.match(evt.request).then(cacheRes => {
             if (cacheRes) {
@@ -46,6 +45,9 @@ self.addEventListener('fetch', evt => {
                     })
                 );
             }
+            return fetch(evt.request);
+        }).catch(error => {
+            console.error('Fetch failed:', error);
             return fetch(evt.request);
         })
     );
