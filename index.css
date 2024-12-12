@@ -19,6 +19,7 @@ body {
 
 
 a {
+    top: 40%;
     color: #e4e2ec;
     position: fixed;
     display: flex;
@@ -28,11 +29,18 @@ a {
     background-color: #70412f;
     padding: 1.3em;
     border-radius: 50em;
-    font-size: 1em;
+    font-size: 2em;
     font-family: bold;
     box-shadow: 0 0em 0.4em rgba(0, 0, 0, 0.9);
     width: 2em;
     height: 2em;
     text-align: center;
     border: 0.2em solid #d7ab7c;
+  
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 2em;
 }
