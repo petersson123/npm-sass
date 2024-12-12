@@ -1,4 +1,4 @@
-const staticCacheName = 'site-static';
+/*const staticCacheName = 'site-static';
 const assets = [
     './',
     './index.html',
@@ -51,4 +51,6 @@ self.addEventListener('fetch', evt => {
             return fetch(evt.request);
         })
     );
-});
+});*/
+
+class ServiceWorker {}
