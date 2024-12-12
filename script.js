@@ -3,23 +3,24 @@ const questions = [
 
 
     { question: "Vad heter denna typen av åkstil?", image: "./bilder/1.jpg", options: ["Freeride", "Piståkning", "Freestyle"], answer: 0 },
-    { question: "Var i backen passar denna skidan bäst?", image: "./bilder/nedladdning1.jpg", options: ["Pist", "Off-pist", "All-mountain"], answer: 1 },
+    { question: "Var i backen passar denna skidan bäst?", image: "./bilder/2.jpg", options: ["Pist", "Off-pist", "All-mountain"], answer: 1 },
     { question: "Vilket är sveriges största skidsystem?", options: ["Åre", "Branäs", "Sälen"], answer: 2 },
-    { question: "Vilket år kom längskidåkning till OS?", image: "./bilder/variant.jpg", options: ["1936", "1924", "1932"], answer: 1 },
+    { question: "Vilket år kom längskidåkning till OS?", image: "./bilder/4.jpg", options: ["1936", "1924", "1932"], answer: 1 },
 
-    { question: "Vilken är den största planeten i vårt solsystem?", options: ["Jorden", "Mars", "Jupiter"], answer: 2 },
-    { question: "Vad är 5 x 6?", options: ["30", "35", "40"], answer: 0 },
-    { question: "Vilket land ligger norr om Sverige?", options: ["Norge", "Finland", "Danmark"], answer: 0 },
-    { question: "Vad är huvudstaden i Frankrike?", options: ["Berlin", "Madrid", "Paris"], answer: 2 },
-    { question: "Vilken är den största havet på jorden?", options: ["Atlanten", "Indiska oceanen", "Stilla havet"], answer: 2 },
-    { question: "Vem skrev 'Romeo och Julia'?", options: ["Shakespeare", "Dickens", "Austen"], answer: 0 }
+    { question: "Vilka 3 disciplinerna ingår i alpin skidåkning?", 
+        options: ["Slalom, Storslalom, Super-G,", "Skicross, puckelpist, Backhoppning", "Skateåkning, Telemark, Sprint" ], answer: 0 },
+    { question: "Vad kallas den punkt på en backhoppningsbana där hopparna förväntas landa för att få optimala poäng?", options: ["G-punkt", "F-punkt", "k-punkt"], answer: 2 }, 
+    { question: "I vilket land arrangerades det första VM i alpin skidåkning, och vilket år hölls det?", options: ["Norge, Trysil, år 1935", "Mürren, Schweiz, år 1931", "Italien, Cervino, år 1932"], answer: 1 },
+    { question: "Vad kostar denna lavinutrustning", options: ["cirka 12 000kr", "cirka 5000kr", "cirka 8000kr"], answer: 2 },
+    { question: "Vilken säkerhetsutrustning är obligatorisk vid alpin tävlingsåkning?", options: ["Hjälm är obligatoriskt", "Hjälm, ryggskydd och käkskydd", "Hjälm, knäskydd och käkskydd"], answer: 2 },
+    { question: "Hur många världscuplopp vann Ingemar Stenmark?", options: ["83", "85", "86", "87"], answer: 3 }
 ];
 
 
 const timerEl = document.getElementById("timer");
 let currentQuestionIndex = 0;
 let score = 0;
-let timeLeft = 10;
+let timeLeft = 15;
 let timer;
 
 function loadQuestion() {
@@ -90,7 +91,7 @@ function nextQuestion() {
 
 function starttimer() {
   clearInterval(timer); 
-  timeLeft = 10; 
+  timeLeft = 15; 
   timerEl.textContent = `Timer ${timeLeft}s`; 
   timerEl.classList.remove('red-bg'); 
   timerEl.classList.add('green-bg'); 

@@ -43,6 +43,7 @@ header {
 .options {
   list-style: none;
   padding: 0;
+}
 
   button {
     width: 100%;
@@ -55,6 +56,7 @@ header {
     cursor: pointer;
     transition: background 0.3s ease, opacity 0.3s ease;
     margin-bottom: 10px;
+  }
 
     &.selected {
       background: $selected-color;
@@ -64,8 +66,8 @@ header {
       opacity: $disabled-opacity;
       cursor: not-allowed;
     }
-  }
-}
+  
+
 
 .next-btn {
   display: none;
@@ -79,11 +81,12 @@ header {
   cursor: pointer;
   margin-top: 15px;
   transition: background 0.3s ease;
+}
 
   &:hover {
     background: $button-hover-color;
   }
-}
+
 
 footer {
   text-align: center;
