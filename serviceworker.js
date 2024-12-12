@@ -3,14 +3,14 @@ const assets = [
     './',
     './index.html',
     './index.js',    
-    './bilder/bakgrund.jpg',
-    './bilder/fraga1.jpg',
-    './bilder/fraga2.jpg',
+    './bilder/backgrund.jpg',
+    './bilder/1.jpg',
     './main.css',
     './main.css.map',
     './bootstrap.min.css',
     './script.js',
-    './st.html'
+    './st.html',
+    './4.jpg',
 ];
 
 self.addEventListener('install', evt => {
