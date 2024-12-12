@@ -220,6 +220,22 @@ body {
     font-size: 0.8em;
   }
 
+  #timer.red-bg {
+    top: 1em;
+    right: 1em;
+    width: 2.5em;
+    height: 2.5em;
+    font-size: 0.8em;
+  }
+
+  #timer.green-bg {
+    top: 1em;
+    right: 1em;
+    width: 2.5em;
+    height: 2.5em;
+    font-size: 0.8em;
+  }
+
   #score {
     font-size: 1.2em;
   }
