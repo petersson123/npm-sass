@@ -12,7 +12,7 @@ const questions = [
     { question: "Vad kallas den punkt på en backhoppningsbana där hopparna förväntas landa för att få optimala poäng?", options: ["G-punkt", "F-punkt", "k-punkt"], answer: 2 }, 
     { question: "I vilket land arrangerades det första VM i alpin skidåkning, och vilket år hölls det?", options: ["Norge, Trysil, år 1935", "Mürren, Schweiz, år 1931", "Italien, Cervino, år 1932"], answer: 1 },
     { question: "Vad kostar denna lavinutrustning", options: ["cirka 12 000kr", "cirka 5000kr", "cirka 8000kr"], answer: 2 },
-    { question: "Vilken säkerhetsutrustning är obligatorisk vid alpin tävlingsåkning?", options: ["Hjälm", "Hjälm, käkskydd", "Hjälm, knäskydd, ryggskydd"], answer: 0 },
+    { question: "Vilken säkerhetsutrustning är obligatorisk vid alpin tävlingsåkning?", options: ["Hjälm", "Hjälm, käkskydd", "Hjälm, handskar"], answer: 0 },
     { question: "Hur många världscuplopp vann Ingemar Stenmark?", options: ["83", "85", "87", "86"], answer: 3 }
 ];
 
