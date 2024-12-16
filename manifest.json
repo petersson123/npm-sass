@@ -1,6 +1,15 @@
 {
   "theme_color": "#7c3f28",
   "background_color": "#ebaf6b",
+
+  "orientation": "any",
+  "display": "standalone",
+  "dir": "auto",
+  "lang": "sv",
+  "name": "Quiz",
+  "short_name": "Quiz",
+  "start_url": "https://petersson123.github.io/npm-sass/",
+
   "icons": [
     {
       "purpose": "maskable",
@@ -14,12 +23,5 @@
       "src": "./bilder/icon512_maskable.png",
       "type": "image/png"
     }
-  ],
-  "orientation": "any",
-  "display": "standalone",
-  "dir": "auto",
-  "lang": "sv",
-  "name": "Quiz",
-  "short_name": "Quiz",
-  "start_url": "https://petersson123.github.io/npm-sass/"
+  ]
 }

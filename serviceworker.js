@@ -1,16 +1,18 @@
-const staticCacheName = "site-static";
+const staticCacheName = "site-static-v1";
 const assets = [
   "./",
   "./index.html",
   "./index.js",
+  "./manifest.json",
   "./bilder/background.jpg",
   "./bilder/1.jpg",
+  "./bilder/4.jpg",
+  "./bilder/icon512_maskable.png",
   "./main.css",
   "./main.css.map",
   "./bootstrap.min.css",
   "./script.js",
   "./st.html",
-  "./bilder/4.jpg",
 ];
 
 self.addEventListener("install", (evt) => {
@@ -31,7 +33,18 @@ self.addEventListener("install", (evt) => {
 
 self.addEventListener("activate", (evt) => {
   console.log("service worker has been activated");
-  evt.waitUntil(self.clients.claim());
+  evt.waitUntil(
+    Promise.all([
+      self.clients.claim(),
+      caches.keys().then((keys) => {
+        return Promise.all(
+          keys
+            .filter((key) => key !== staticCacheName)
+            .map((key) => caches.delete(key))
+        );
+      }),
+    ])
+  );
 });
 
 self.addEventListener("fetch", (evt) => {
@@ -39,22 +52,9 @@ self.addEventListener("fetch", (evt) => {
     caches
       .match(evt.request)
       .then((cacheRes) => {
-        if (cacheRes) {
-          return cacheRes.blob().then(
-            (body) =>
-              new Response(body, {
-                headers: {
-                  "Content-Type": cacheRes.headers.get("Content-Type"),
-                  "Cache-Control": "public, max-age=3600",
-                  "Last-Modified": cacheRes.headers.get("Last-Modified"),
-                },
-              })
-          );
-        }
-        return fetch(evt.request);
+        return cacheRes || fetch(evt.request);
       })
-      .catch((error) => {
-        console.error("Fetch failed:", error);
+      .catch(() => {
         return fetch(evt.request);
       })
   );
