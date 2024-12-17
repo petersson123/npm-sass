@@ -131,6 +131,7 @@ body {
   
 }
 
+
 .options button {
   width: 50%;
   justify-content: center;
@@ -165,6 +166,8 @@ body {
   border: none;
 
 }
+
+
 
 .next-btn {
   display: flex;
