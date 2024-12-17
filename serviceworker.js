@@ -13,6 +13,7 @@ const assets = [
   "./bootstrap.min.css",
   "./script.js",
   "./st.html",
+  "./bilder/5.jpg",
 ];
 
 self.addEventListener("install", (evt) => {
