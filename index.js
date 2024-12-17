@@ -11,11 +11,8 @@ function RegisterServiceWorker() {
   }
 }
 
-/*function Main() {
+function Main() {
   RegisterServiceWorker();
 }
 
-
-const main = new Main();*/
-
-this.RegisterServiceWorker();
+const main = new Main();

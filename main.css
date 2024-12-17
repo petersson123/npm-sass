@@ -131,6 +131,7 @@ body {
   
 }
 
+
 a {
   display: flex;
   padding: 0.3em;
@@ -184,6 +185,8 @@ a {
   border: none;
 
 }
+
+
 
 .next-btn {
   display: flex;
