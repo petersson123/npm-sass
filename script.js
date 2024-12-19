@@ -78,18 +78,29 @@ function checkAnswer(button, isCorrect) {
 
 function nextQuestion() {
     currentQuestionIndex++;
-  
+
     if (currentQuestionIndex < questions.length) {
-      loadQuestion();
-      starttimer();
+        loadQuestion();
+        starttimer();
     } else {
-      document.getElementById("quiz").innerHTML = `
-        <h2>Quizet är över!</h2>
-        <p>Du fick ${score} av ${questions.length} rätt.</p>
-        <a class="home-btn" href="index.html">Till huvudmeny</a>
-      `;
+        clearInterval(timer); 
+
+       
+        document.getElementById('timer').style.display = 'none';
+        const scoreElements = document.querySelectorAll('.score');
+        scoreElements.forEach(scoreElement => {
+            scoreElement.style.display = 'none'; 
+        });
+
+        
+        document.getElementById("quiz").innerHTML = `
+            <h2>Quizet är över!</h2>
+            <p>Du fick ${score} av ${questions.length} rätt.</p>
+            <a class="home-btn" href="index.html">Till huvudmeny</a>
+        `;
     }
-  }
+}
+
 
 function starttimer() {
   clearInterval(timer); 
