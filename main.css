@@ -158,7 +158,7 @@ a {
   width: 50%;
   justify-content: center;
   height: 3em;
-  padding: 0.5em;
+  
   margin: 0.4em 0;
   margin: 0.5em;
   background-color: #d7ab7c;
@@ -290,7 +290,7 @@ a {
 
   .options button {
     font-size: 1em;
-    
+   
   }
 
 
