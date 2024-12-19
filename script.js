@@ -77,17 +77,19 @@ function checkAnswer(button, isCorrect) {
 
 
 function nextQuestion() {
-  currentQuestionIndex++;
-
-  if (currentQuestionIndex < questions.length) {
+    currentQuestionIndex++;
+  
+    if (currentQuestionIndex < questions.length) {
       loadQuestion();
-      starttimer(); 
-  } else {
-      document.getElementById('quiz').innerHTML = `<h2>Quizet är över!</h2>
-          <p>Du fick ${score} av ${questions.length} rätt.</p>`;
+      starttimer();
+    } else {
+      document.getElementById("quiz").innerHTML = `
+        <h2>Quizet är över!</h2>
+        <p>Du fick ${score} av ${questions.length} rätt.</p>
+        <a class="home-btn" href="index.html">Till huvudmeny</a>
+      `;
+    }
   }
-}
-
 
 function starttimer() {
   clearInterval(timer); 
