@@ -103,26 +103,33 @@ function nextQuestion() {
 
 
 function starttimer() {
-  clearInterval(timer); 
-  timeLeft = 15; 
-  timerEl.textContent = `Timer ${timeLeft}s`; 
-  timerEl.classList.remove('red-bg'); 
-  timerEl.classList.add('green-bg'); 
-  timer = setInterval(() => {
-      timeLeft--;
-      timerEl.textContent = `Timer ${timeLeft}s`;
+    clearInterval(timer); 
+    timeLeft = 15; 
+    timerEl.textContent = `Timer ${timeLeft}s`; 
+    timerEl.classList.remove('red-bg'); 
+    timerEl.classList.add('green-bg'); 
+    
+    timer = setInterval(() => {
+        timeLeft--;
+        timerEl.textContent = `Timer ${timeLeft}s`;
 
-      if (timeLeft <= 3) {
-          timerEl.classList.remove('green-bg');
-          timerEl.classList.add('red-bg');
-      }
+        if (timeLeft === 3) {
+            timerEl.classList.remove('green-bg');
+            timerEl.classList.add('red-bg');
 
-      if (timeLeft <= 0) {
-          clearInterval(timer); 
-          showCorrectAnswer(); 
-      }
-  }, 1000); 
+            // Vibrera i 500ms om enheten stöder det
+            if (navigator.vibrate) {
+                navigator.vibrate(500);
+            }
+        }
+
+        if (timeLeft <= 0) {
+            clearInterval(timer); 
+            showCorrectAnswer(); 
+        }
+    }, 1000);
 }
+
 
 
 function showCorrectAnswer() {
