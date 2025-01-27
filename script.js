@@ -116,8 +116,11 @@ function starttimer() {
         if (timeLeft === 3) {
             timerEl.classList.remove('green-bg');
             timerEl.classList.add('red-bg');
-            navigator.vibrate(200);
-            navigator.vibrate([200]);
+            navigator.vibrate(200); // vibrate for 200ms
+            navigator.vibrate([
+                100, 30, 100, 30, 100, 30, 200, 30, 200, 30, 200, 30, 100, 30, 100, 30, 100,
+                ]); // Vibrate 'SOS' in Morse.
+
             
         
         }
