@@ -116,8 +116,9 @@ function starttimer() {
         if (timeLeft === 3) {
             timerEl.classList.remove('green-bg');
             timerEl.classList.add('red-bg');
-            navigator.vibrate 
-            navigator.vibrate(500);
+            navigator.vibrate(200);
+            navigator.vibrate([200]);
+            
         
         }
 
