@@ -116,11 +116,9 @@ function starttimer() {
         if (timeLeft === 3) {
             timerEl.classList.remove('green-bg');
             timerEl.classList.add('red-bg');
-
-            // Vibrera i 500ms om enheten stöder det
-            if (navigator.vibrate) {
-                navigator.vibrate(500);
-            }
+            navigator.vibrate 
+            navigator.vibrate(500);
+        
         }
 
         if (timeLeft <= 0) {
